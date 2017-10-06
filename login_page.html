@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>login page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+        <style>
+        .tc_logo
+        {
+        width: 480px;
+        height: 100px;
+        }
+        
+        #container
+        {
+            width: 500px;
+            height: auto;
+            border: 10px transparent solid;
+            
+            
+        }
+        #f_set
+        {
+            width: 450px;
+            box-shadow: 8px 8px #940206;
+            background-color: lightgoldenrodyellow;
+        }
+        
+        .i_p
+        {
+            width:190px;
+            height: 22px;
+            border-radius: 8px;
+            background-color: whitesmoke;
+        }
+        
+        .i_p:hover{
+            border-color: #3017f3;           
+            padding: 1px;
+        }
+        
+        #submit
+        {
+            width: 150px;
+            height: 40px;
+            background-color: #a20209;
+            color: lightcyan;
+            border-radius: 75px;
+            margin-left: 30px;
+            font-weight: bolder;
+        }
+        
+         #submit:hover{
+             background-color: lightsalmon;
+             color: #a20209;
+             font-weight: bolder;
+        }
+        
+        .warning_container
+        {
+            width: 470px;
+            box-shadow: 8px 8px #940206;
+         }
+         
+        td
+        {
+          text-align: center;
+          padding: 10px;
+         
+        }
+      
+        #fset_2{
+           background-color: lightgoldenrodyellow;
+         
+        }
+       
+  
+        
+        
+        </style>
+
+    </head>
+    <body>
+        <center>
+        <div id="container">
+            <img  class="tc_logo" src="Techno-Logo.jpg" alt="not avalaible"/>
+            <br>
+            
+            <div id="form_container">
+            <br>
+  
+        <fieldset id="f_set">
+            <legend>RE-ALLOCATION  PORTAL</legend>
+            <br>
+            <table>
+            <tr>    
+                <td><label>User ID : </label></td>
+                <td><input class="i_p" id="usrid" type="email" name="user id"/></td>
+            </tr>
+        
+            <tr>
+                <td><label>Name : </label></td>
+                <td><input class="i_p" type="text" id="name" name="name"/></td>
+            </tr>
+            <tr>
+                <td><label>Branch : </label></td>
+            <td>
+            <select class="i_p" id="branch" >
+                <option value="cs">Computer Science (CS)</option>
+                <option value="it">Information Technology (IT)</option>
+                <option value="me">Mechanical Engineering (ME)</option>
+                <option value="ce">Civil Engineering (CE)</option>
+                <option value="ee">Electrical Engineering (EE)</option>
+                <option value="ec">Electronics and Communication (EC)</option>
+                <option value="df">Departmental Faculty</option>
+             </select>
+            </td>
+            </tr>
+            
+            <tr>
+                <td><label>Year :</label></td>
+            <td>
+            <select class="i_p" id="year">
+                <option value="1">First Year (1st)</option>
+                <option value="2">Second Year (2nd)</option>
+                <option value="3">Third Year (3rd)</option>
+                <option value="4">Fourth Year (4th)</option>
+                <option value="df">Departmental Faculty</option>
+             </select>
+            </td>        
+            </tr>
+            <tr>
+                <td><label>Purpose :</label></td>
+                <td ><textarea style="width: 200px; margin-left:15px; background-color:whitesmoke;" id="purpose"></textarea></td>
+            </tr>
+            <tr >
+                <td ><input type="submit" id="submit" onclick="subbmitfn();" value="SUBMIT"/></td>
+                <td ><input type="reset" id="submit" value="RESET"/></td>
+            </tr>
+            </table>
+                       
+        </fieldset>
+            </div>
+            
+            <br>
+          
+            <div class="warning_container">
+                <fieldset id="f_set2">
+                    <legend>NOTE</legend>
+                    <p>The validity of each Internet Access ID is <b>7 days!</b></p>
+                </fieldset>  
+            </div>
+            <br>
+        </div>
+        </center>
+    </body>
+    
+<script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDOd-sh-y9iR77kzlW1x_OFHGkWy0u3_QA",
+    authDomain: "netform-d2afa.firebaseapp.com",
+    databaseURL: "https://netform-d2afa.firebaseio.com",
+    projectId: "netform-d2afa",
+    storageBucket: "netform-d2afa.appspot.com",
+    messagingSenderId: "644900469292"
+  };
+  firebase.initializeApp(config);
+
+    function subbmitfn(){
+       // var database = firebase.database().ref('usr1');
+        var userid=document.getElementById('usrid').value;
+        var name=document.getElementById('name').value;
+        var year=document.getElementById('year').value;
+        var purpose=document.getElementById('purpose').value;
+        var branch=document.getElementById('branch').value;
+       // var postdata = database.push().key;
+         
+        firebase.database().ref().push().set({
+            userid: userid,
+            name:name,
+            branch:branch,
+            year:year,
+            purpose:purpose
+            
+        });
+        //console.log(postdata);
+        
+        
+        
+    };
+    
+    
+</script>
+</html>

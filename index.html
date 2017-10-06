@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Sign In</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="icon" href="Techno India NJR Institute of Technology, Udaipur Logo.jpg" type="image/jpg">
+        
+        <style>
+            .logo_img img
+            {
+                width: 450px;
+            }
+            .main_container
+            {
+                width:500px;
+                padding:15px;
+                margin-top: 50px;
+                border-radius: 6px;
+                
+                //box-shadow: 3px 2px 1px lightgrey;
+            }
+            .animation_logo img
+            {
+                width: 350px;
+            }
+            .button_container a
+            {
+                text-decoration: none;
+                color:black;    
+                font-family: Century Gothic;
+            }
+            .button_container
+            {
+                background-color: #e9e9e9;
+                padding: 15px;
+                border-radius: 6px;
+                width: 250px;
+      
+            }
+            .w3-btn {
+	
+                margin-bottom:10px;
+	
+                font-size: 20px;
+            }
+        </style>
+
+    </head>
+    <center>
+        <body>
+        <center>
+            <div class="main_container">
+                <div class ="logo_img">
+                    <img src="Techno-Logo.jpg" alt="Techno logo" /><div>
+                        <div class="animation_logo">
+                            <img src="200.webp"/>
+                        </div>
+                     <button onclick="signin()" class="w3-btn w3-white w3-border w3-border-red w3-round-large"><i class="fa fa-google" aria-hidden="true">   Sign in with google </i></button>
+                    </div>     
+                    </center>
+                
+                
+<script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDOd-sh-y9iR77kzlW1x_OFHGkWy0u3_QA",
+    authDomain: "netform-d2afa.firebaseapp.com",
+    databaseURL: "https://netform-d2afa.firebaseio.com",
+    projectId: "netform-d2afa",
+    storageBucket: "netform-d2afa.appspot.com",
+    messagingSenderId: "644900469292"
+  };
+  firebase.initializeApp(config);
+</script>
+    <script src="script.js"></script>
+                    </body>
+
+                    </html>

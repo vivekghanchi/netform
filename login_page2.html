@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <style>
+            img{
+               width: 420px;
+               height: 100px;  
+            }
+           
+             #note{
+                width: 480px;
+                height: auto;
+                box-shadow: 8px 8px #940206;
+                
+            }
+            
+           #form_1{
+                width: 480px;
+            }
+            
+            #form{
+                width: 450px;
+                box-shadow: 8px 8px #940206;
+                background-color: lightgoldenrodyellow;
+            }
+            
+            td{
+                text-align: center;
+                padding: 5px;
+            }
+            
+            #input{
+                width: 150px;
+                height: 20px;
+                border-radius: 10px;
+                background-color: whitesmoke;
+                margin: 5px;
+        }
+        
+        #input:hover{
+            border-color: #3017f3;
+            padding: 1px;
+        }
+        
+         #submit
+        {
+            width: 150px;
+            height: 40px;
+            background-color: #a20209;
+            color: lightcyan;
+            border-radius: 75px;
+            margin-left: 30px;
+            font-weight: bolder;
+        }
+        
+         #submit:hover{
+             background-color: lightsalmon;
+             color: #a20209;
+             font-weight: bolder;
+        }
+        
+        marquee{
+            background-color: black;
+            color: white;
+        }
+       
+        </style>
+    </head>
+    
+    
+    <body>
+        <div class="content">
+            <center>
+                
+                <img src="Techno-Logo.jpg">
+                
+                
+                <div id="form_1">
+                    <marquee><h4> WELCOME  TO   TECHNO   INDIA   NJR   PORTAL </h4></marquee>
+                    
+                    <fieldset id="form">
+                        <legend>SIGN-UP  PORTAL</legend>
+    
+                        <table>
+                        
+                          <tr>
+                              <td><label>Name : </label></td>
+                              <td><input id="input"  name="name"/></td>
+                          </tr>
+                        
+                        <tr>
+                            <td><label>Mobile Number : </label></td>
+                            <td><input id="input" name="no."></td>
+                        </tr>
+                        
+                        
+                        <tr>
+                            <td><label>Branch : </label></td>
+                            <td> 
+                                <select id="input">
+                             <option>Computer Science (CS)</option>
+                             <option>Information Technology (IT)</option>
+                             <option>Mechanical Engineering (ME)</option>
+                             <option>Civil Engineering (CE)</option>
+                             <option>Electrical Engineering (EE)</option>
+                             <option>Electronics and Communication (EC)</option>
+                             <option>Departmental Faculty</option>
+                                </select>
+                            </td>
+                        </tr>
+                       
+                        
+                        
+                         <tr>
+                             <td><label>Year : </label></td>
+                        <td>
+                            <select id='input'>
+                                <option>First Year (1st)</option>
+                                <option>Second Year (2nd)</option>
+                                <option>Third Year (3rd)</option>
+                                <option>Fourth Year (4th)</option>
+                                <option>Departmental Faculty</option>
+                            </select>
+                        </td>        
+                        </tr>
+                       
+                        
+                        <tr>
+                            <td ><input type="submit" id="submit" value="SUBMIT"/></td>
+                            <td ><input type="reset" id="submit" value="RESET"/></td>
+                        </tr>
+                        
+                        
+                            </table>
+                    </fieldset>
+                </div>
+                <br>
+                <div id="note">
+                    <fieldset style="background-color: lightgoldenrodyellow;">
+                        <legend>NOTE- </legend>
+                        <p>If your ID does not get allotted within 24 hours then reach Server Room.</p>
+                    </fieldset>
+                </div>
+            </center>
+        </div>
+    </body>
+    
+</html>

@@ -10,6 +10,9 @@ This is the online web portal for Techno India NJR institute of Technology for r
 -   CSS
 -   HTML
 
+## Developer
+
+Vivek Ghanchi
 
 
 

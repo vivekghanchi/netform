@@ -9,7 +9,7 @@ This is the online web portal for Techno India NJR institute of Technology for r
 -   Firebase
 -   CSS
 -   HTML
--   Bootstrap
+
 
 ## Developer
 

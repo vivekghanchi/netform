@@ -5,10 +5,10 @@ This is the online web portal for Techno India NJR institute of Technology for r
 
 ## Technology Stack 
 
--   PHP 
--   Firebase
--   CSS
--   HTML
+-  PHP 
+-  Firebase
+-  CSS
+-  HTML
 
 
 ## Developer
